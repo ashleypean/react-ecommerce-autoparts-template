@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable no-console */
 const { models: { order, orderDetail } } = require('../models/index.js');
 
@@ -61,8 +62,6 @@ async function createOrder(req, res, next) {
       amount: amountPaid,
       timestamp: new Date(),
     });
-
-    //console.log(orderEntry);
 
     const { orderID } = orderEntry;
     const orderDetailsInput = productIDs.map((productID) => ({

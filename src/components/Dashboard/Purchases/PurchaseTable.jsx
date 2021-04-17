@@ -7,8 +7,6 @@ const PurchaseTable = (props) => {
 
   const { purchases } = props;
 
-  console.log(purchases);
-
   const columns = [
     {
       title: 'Purchase Date',
@@ -27,7 +25,7 @@ const PurchaseTable = (props) => {
 
   return (
     <div className="purchaseParent">
-      <MaterialTable title="Purchase History" data={purchases} columns={columns} />
+      <MaterialTable title="Purchase History" data={data} columns={columns} />
     </div>
   );
 };

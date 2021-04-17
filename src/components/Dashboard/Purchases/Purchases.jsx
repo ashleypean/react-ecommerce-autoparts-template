@@ -31,8 +31,8 @@ const Purchases = () => {
 
   return (
     <div id="purchases">
-      <h1>Purchased History</h1>
-      <PurchaseTable purchases={purchases}/>
+      <h1>Seller History</h1>
+      <PurchaseTable purchases={purchases} />
       <div>
       </div>
     </div>
