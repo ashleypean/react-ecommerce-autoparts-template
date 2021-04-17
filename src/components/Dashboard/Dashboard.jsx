@@ -14,6 +14,7 @@ import ProductForm from './ProductForm';
 import Purchases from './Purchases/Purchases';
 import Inventory from './Inventory/Inventory';
 import Messages from './Messages/Messages';
+import InventoryChart from './Inventory/InventoryChart';
 
 const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
@@ -32,7 +33,7 @@ const Dashboard = () => {
 
   const ownerRoutes = (
     <>
-      <Route exact path="/dashboard" component={Inventory} />
+      <Route exact path="/dashboard" component={InventoryChart} />
       <Route exact path="/dashboard/newProduct" component={ProductForm} />
       <Route exact path="/dashboard/inventory" component={Inventory} />
       <Route exact path="/dashboard/purchases" component={Purchases} />

@@ -10,12 +10,12 @@ import * as types from '../../../redux/actions/actionTypes';
 const Inventory = () => {
   const supplierID = useSelector((state) => state?.auth?.user?.id);
   const inventory = useSelector((state) => state.products.inventory);
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
 
   const getInventory = async () => {
     const res = await axios.get(`/api/products/ByUser/${supplierID}`);
 
-    dispath({ type: types.ADD_INVENTORY, payload: res.data });
+    dispatch({ type: types.ADD_INVENTORY, payload: res.data });
   };
 
   useEffect(() => {
