@@ -7,8 +7,6 @@ const PurchaseTable = (props) => {
 
   const { purchases } = props;
 
-  console.log(purchases);
-
   const columns = [
     {
       title: 'Purchase Date',

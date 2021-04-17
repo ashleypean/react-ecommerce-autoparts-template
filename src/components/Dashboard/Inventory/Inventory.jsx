@@ -1,14 +1,11 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
 import './Inventory.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import MaterialTable from 'material-table';
-import InventoryChart from './InventoryChart';
 import * as types from '../../../redux/actions/actionTypes';
-
-// import PurchaseTable from "../Purchases/PurchaseTable";
 
 const Inventory = () => {
   const supplierID = useSelector((state) => state?.auth?.user?.id);
@@ -17,7 +14,7 @@ const Inventory = () => {
 
   const getInventory = async () => {
     const res = await axios.get(`/api/products/ByUser/${supplierID}`);
-    console.log(res.data);
+
     dispath({ type: types.ADD_INVENTORY, payload: res.data });
   };
 
